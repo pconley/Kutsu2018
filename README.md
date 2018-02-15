@@ -1,24 +1,16 @@
-# README
+# Kutsu2018
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## PG Database
 
-* Ruby version
+initdb -D pg_data      # one time to initialize the db
 
-* System dependencies
+createdb dev1          # dev1 is the name of the database
 
-* Configuration
+pg_ctl -D pg_data -l logfile start
 
-* Database creation
+psql                   # to enter interactive mode
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+pg_ctl -D pg_data stop

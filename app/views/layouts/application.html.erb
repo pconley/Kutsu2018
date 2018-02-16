@@ -8,8 +8,23 @@
   </head>
 
   <body>
-  	<%= render 'layouts/header' %>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </body>
+    <!-- theme preloader area start -->
+    <div id="humanity-preloader-wrapper">
+        <div class="preloader-wave-effect"></div>
+    </div>
+    <!-- theme preloader area end -->
+
+    <!-- Main wrapper start -->
+    <div class="wrapper">
+        <%= render 'layouts/messages' %>
+        <%= render 'layouts/header' %>
+        <%= render 'layouts/search' %>
+        <%= render 'layouts/slider' if false %>
+        <%= yield %>
+    </div>
+    <!-- Main wrapper end -->
+
+    <%= render 'layouts/footer' %>
+</body>
+
 </html>

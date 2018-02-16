@@ -1,42 +1,180 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <a class="navbar-brand" href="#">Kutsu2018</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item <%= 'active' if @page == 'home' %>">
-        <%= link_to 'Home', pages_home_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'about' %>">
-        <%= link_to 'About', pages_about_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'History', pages_history_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'Programs', pages_programs_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'Request', pages_requests_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'Quotes', pages_faqs_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'Contact Us', pages_contact_path, class:"nav-link" %>
-      </li>
-      <li class="nav-item <%= 'active' if @page == 'error' %>">
-        <%= link_to 'Error', pages_error_path, class:"nav-link" %>
-      </li>
-    </ul>
-    <form class="form-inline mt-2 mt-md-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-    <div class="nav-item">
-        <%= link_to 'Login', "#", class:"nav-link" %>
+<!-- Header area start -->
+<header class="header-area header-with-countdown header-bottom-bg">
+    <div class="header-top-area red-header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-8">
+                    <div class="header-top-left">
+                        <ul class="email-phone">
+                            <li><a href="#"><i class="fa fa-envelope"></i> Email: <span class="text-bold">info@yourdomain.com</span></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+9 341 670 5657</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-4">
+                    <div class="header-top-right">
+                        <ul class="header-social-menu">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-  </div>
-</nav>
+    <div class="main-header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-12">
+                    <div class="logo-wrapper">
+                        <a class="logo" href="index.html">NOS (header)</a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-9 col-xs-12">
+                    <div class="countdown-area">
+                        <div class="countdown-message">
+                            <h2>Our next event</h2>
+                            <p>Make your donation now</p>
+                        </div>
+                        <div class="countdown">
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="days">0</h4>
+                                    <span>days</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="hours">0</h4>
+                                    <span>hours</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="minutes">0</h4>
+                                    <span>minutes</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="seconds">0</h4>
+                                    <span>seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 hidden-sm hidden-xs">
+                    <div class="header-btn">
+                        <ul class="header-action">
+                            <li><a class="btn btn-default" href="#">donate now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sticky-header" class="menu-full-width color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 hidden-xs hidden-sm">
+                    <div class="menu-area">
+                        <nav class="template-menu">
+                            <ul class="main-menu">
+                                <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="index.html">humanity - home 1</a></li>
+                                        <li><a href="index-2.html">humanity - home 2</a></li>
+                                        <li><a href="index-3.html">humanity - home 3</a></li>
+                                        <li><a href="index-4.html">humanity - home 4</a></li>
+                                        <li><a href="index-5.html">humanity - home 5</a></li>
+                                        <li><a href="index-6.html">humanity - home 6</a></li>
+                                        <li><a href="index-7.html">humanity - home 7</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">event<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="event-grid-view.html">event grid</a></li>
+                                        <li><a href="event-left-sidebar.html">event left sidebar</a></li>
+                                        <li><a href="event-right-sidebar.html">event right sidebar</a></li>
+                                        <li><a href="single-event.html">single event</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                        <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
+                                        <li><a href="single-blog-post.html">single blog post</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><%= link_to 'About', pages_about_path %></li>
+                                        <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                        <li><a href="contact.html">contact</a></li>
+                                        <li><a href="volunteer.html">volunteer</a></li>
+                                    </ul>
+                                </li>
+                                <li><%= link_to 'About', pages_about_path %></li>
+                                <li><a href="contact.html">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Mobile menu area start -->
+                <div class="mobile-menu-area clearfix hidden-md">
+                    <nav class="mobile-menu">
+                        <ul class="mobile-menu-nav">
+                            <li><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html">humanity - home 1</a></li>
+                                    <li><a href="index-2.html">humanity - home 2</a></li>
+                                    <li><a href="index-3.html">humanity - home 3</a></li>
+                                    <li><a href="index-4.html">humanity - home 4</a></li>
+                                    <li><a href="index-5.html">humanity - home 5</a></li>
+                                    <li><a href="index-6.html">humanity - home 6</a></li>
+                                    <li><a href="index-7.html">humanity - home 7</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">event</a>
+                                <ul>
+                                    <li><a href="event-grid-view.html">event grid</a></li>
+                                    <li><a href="event-left-sidebar.html">event left sidebar</a></li>
+                                    <li><a href="event-right-sidebar.html">event right sidebar</a></li>
+                                    <li><a href="single-event.html">single event</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">blog</a>
+                                <ul>
+                                    <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
+                                    <li><a href="single-blog-post.html">single blog post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">pages</a>
+                                <ul>
+                                    <li><%= link_to 'About', pages_about_path %></li>
+                                    <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                    <li><a href="contact.html">contact</a></li>
+                                    <li><a href="volunteer.html">volunteer</a></li>
+                                </ul>
+                            </li>
+                            <li><%= link_to 'About', pages_about_path %></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile menu area end -->
+                <div class="col-md-2">
+                    <div class="header-search text-right">
+                        <a class="search-toggle-button" href="#"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header area end -->

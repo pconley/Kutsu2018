@@ -1,2 +1,13 @@
-<h1>FAQs</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<h1>Quotes (from db table)</h1>
+<ul>
+<% @quotes.each do |quote| %>
+
+	<li class="quote">
+		<div class="statement"><%= "\"#{quote.text}\"" %></div>
+		-
+		<div class="signature"><%= quote.signature %></div>
+		<i class="fa fa-thumbs-up fa-2x pull-left"></i> 
+	</li>
+
+<% end %>
+</ul>

@@ -17,6 +17,7 @@ class PagesController < ApplicationController
   end
 
   def faqs
+    @quotes = Quote.all
   end
 
   def history

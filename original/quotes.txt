@@ -1,4 +1,4 @@
-quotes = [
+[
 ["...Thank you, thank you, thank you! Ya'll will never know how much these shoes meant....  When we opened the box she started crying and asking if they were for her. For a child who never owned more than 1 pair of shoes in her life, it was like Christmas.... Once again I want to say thanks, you made my child's whole year...", "BA, Daughter Age 5, Louisiana"], 
 ["...I would like to applaud you for the service you offer. It is indeed a nice feeling to know that I have at last found (an organization) that caters to my needs! ... Everything was perfect ... I would like you to know how much easier you make (getting) shoes for an amputee...", "JS, Age 39, Florida"], 
 ["...it made me feel like a little kid that had just found a treasure box! To have 5 pairs of shoes at once is unheard of! ...I can't put into words how much I appreciate all the effort.", "CH, Age 45, California"], 
@@ -46,9 +46,3 @@ quotes = [
 ["Thank you so much for the ... shoes. They fit (him) great and they are the first pair of shoes in the last year or so that fit him and (that) he likes. ... Your organization is a wonderful gift.", "WL, Son Age 5, Ohio"
 ]
 ]
-
-Quote.delete_all
-
-quotes.each do |text, sig|
-  Quote.create( text: text, signature: sig, status: :normal )
-end

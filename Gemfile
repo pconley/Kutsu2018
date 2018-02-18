@@ -8,6 +8,7 @@ end
 gem 'jquery-rails' # needed for bootstrap
 gem 'bootstrap', '~> 4.0.0.beta2'
 gem 'font-awesome-sass', '~> 5.0.6'
+gem 'popper_js', '~> 1.12.9'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

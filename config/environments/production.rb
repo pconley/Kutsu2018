@@ -1,6 +1,5 @@
 Rails.application.configure do
 
-
   # config/environments/production.rb
 config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 if ENV["RAILS_LOG_TO_STDOUT"].present?
@@ -41,6 +40,8 @@ end
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
+  config.assets.compile = true # added to try to get FA working
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 

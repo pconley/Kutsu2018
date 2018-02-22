@@ -12,3 +12,10 @@ pg_ctl -D pg_data -l logfile start
 psql                   # to enter interactive mode
 pg_ctl -D pg_data stop
 ```
+
+## Heroku Notes
+
+Normally you push the master to deploy to heroku, but you can used
+```
+git push heroku testbranch:master
+```

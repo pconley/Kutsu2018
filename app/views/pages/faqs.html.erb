@@ -1,19 +1,5 @@
-<!-- quotes section start -->
-<div class="donet-section theme-section theme-section-ex-padding">
-    <div class="container">
-		<h1>Quotes (from db table)</h1>
-		<ul>
-		<% @quotes.each do |quote| %>
-
-			<li class="quote">
-				<div class="statement"><%= "\"#{quote.text}\"" %></div>
-				-
-				<div class="signature"><%= quote.signature %></div>
-				<i class="fa fa-thumbs-up fa-2x pull-left"></i> 
-			</li>
-
-		<% end %>
-		</ul>
-    </div>
-</div>
-<!-- quotes section end -->
+<!-- Page content area start -->
+<section class="content">
+    <%= render 'sections/quotes'%>
+</section>
+<!-- Page content area end -->

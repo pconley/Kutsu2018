@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   end
 
   def home
+    @quotes = Quote.all
   end
 
   def error

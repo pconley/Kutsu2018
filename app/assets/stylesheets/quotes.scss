@@ -1,3 +1,43 @@
-// Place all the styles related to the Quotes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ku-quote {
+    padding: 0 15px;
+    font-size: 14px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.ku-quote .card {
+    margin-top: 15px;
+}
+
+.ku-quote h4 {
+    padding: 0 15px;
+    font-size: 14px;
+    color: red;
+}
+
+.ku-quote img {
+    border-radius: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.ku-quote-signature {
+  color: #444;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.ku-quote-signature .designation {
+    font-size: 11px;
+    color: #03bb84;
+    display: block;
+    line-height: 1;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-transform: unset;
+}

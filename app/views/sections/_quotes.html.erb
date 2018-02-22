@@ -1,0 +1,28 @@
+<!-- quotes section start -->
+<div class="theme-section theme-section-ex-padding ku-quote-section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="area-heading text-center">
+                    <h2 class="area-title">what our recipeints say?</h2>
+                    <p>Quotes. Note that you get a random selection of quotes each time the page is rendered.  I am not finished, but working to use this section to get more fine grained control over the formatting.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row ku-quote">
+            <% sample = @quotes.sample(12) %>
+            <% sorted = sample.sort { |a,b| a.text.length <=> b.text.length } %>
+            <% sorted.each do |quote| %>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="card card-body">
+                        <h4 class="card-title"><%= quote.signature %></h4>
+                        <p class="card-text"><%= quote.text %></p>
+                    </div>
+                </div>
+
+            <% end %>
+        </div>
+    </div>
+</div>
+<!-- quotes section end -->

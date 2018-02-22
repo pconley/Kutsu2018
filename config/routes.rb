@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   get 'pages/donate'
   get 'pages/contact'
   get 'pages/faqs'
-  get 'pages/error'
+
+  match "*path", to: "pages#error", via: :all
+
 end

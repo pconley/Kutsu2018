@@ -19,3 +19,8 @@ Normally you push the master to deploy to heroku, but you can used
 ```
 git push heroku testbranch:master
 ```
+
+do not forget to precomile if changing the css; then add; comit; push
+```
+rake assets:precompile
+```

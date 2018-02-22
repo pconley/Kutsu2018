@@ -93,6 +93,8 @@
         }, ]
     });
 
+    console.log("*** here");
+    
     // Testimonial slider
     $('.testimonial-wrapper').slick({
         autoplay: true,

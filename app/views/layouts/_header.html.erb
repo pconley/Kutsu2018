@@ -7,7 +7,7 @@
                     <div class="header-top-left">
                         <ul class="email-phone">
                             <li><a href="#"><i class="fa fa-envelope"></i> Email: <span class="text-bold">info@yourdomain.com</span></a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+9 341 670 5657</span></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+1 703 626 2111</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -18,7 +18,9 @@
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-square"></i></a></li>
+                            <li><%= link_to new_admin_session_path do %>
+                                <i class="fas fa-podcast"></i>
+                            <% end %><li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +72,11 @@
                 <div class="col-md-2 hidden-sm hidden-xs">
                     <div class="header-btn">
                         <ul class="header-action">
-                            <li><a class="btn btn-default" href="#">donate now</a></li>
+                            <% if admin_signed_in? %>
+                                <li><a class="btn btn-default" href="#">log out</a></li>
+                            <% else %>
+                                <li><a class="btn btn-default" href="#">donate now</a></li>
+                            <% end %>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +92,7 @@
                             <ul class="main-menu">
                                 <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
                                     <ul>
-                                        <li><a href="index.html">humanity - home 1</a></li>
+                                        <li><a href="home.html">humanity - home 1</a></li>
                                         <li><a href="index-2.html">humanity - home 2</a></li>
                                         <li><a href="index-3.html">humanity - home 3</a></li>
                                         <li><a href="index-4.html">humanity - home 4</a></li>
@@ -119,6 +125,9 @@
                                     </ul>
                                 </li>
                                 <li><%= link_to 'About', pages_about_path %></li>
+                                <% if admin_signed_in? %>
+                                <li><%= link_to 'Admin', admin_test_path %></li>
+                                <% end %>
                                 <li><a href="contact.html">contact</a></li>
                             </ul>
                         </nav>

@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'devise'
+
 gem 'jquery-rails' # needed for bootstrap
 gem 'bootstrap', '~> 4.0.0.beta2'
 gem 'font-awesome-sass', '~> 5.0.6'

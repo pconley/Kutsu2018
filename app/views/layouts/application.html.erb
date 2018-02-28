@@ -17,14 +17,21 @@
     <!-- Main wrapper start -->
     <div class="wrapper">
         <%= render 'layouts/messages' %>
-        <%= render 'layouts/header' %>
+        <% if admin_signed_in? %>
+            <%= render 'layouts/header_private' %>
+        <% else %>
+            <%= render 'layouts/header' %>
+        <% end %>
         <%= render 'layouts/search' %>
         <%= render 'layouts/slider' if false %>
         <%= yield %>
     </div>
     <!-- Main wrapper end -->
-
-    <%= render 'layouts/footer' %>
+    <% if admin_signed_in? %>
+        <%= render 'layouts/footer_private' %>
+    <% else %>
+        <%= render 'layouts/footer' %>
+    <% end %>
 
 </body>
 

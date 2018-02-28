@@ -124,10 +124,19 @@
                                         <li><a href="volunteer.html">volunteer</a></li>
                                     </ul>
                                 </li>
-                                <li><%= link_to 'About', pages_about_path %></li>
+
                                 <% if admin_signed_in? %>
-                                <li><%= link_to 'Admin', admin_test_path %></li>
+                                <li><a href="#">admin pages<i class="fa fa-angle-down"></i></a>
+                                    <ul>
+                                        <li><%= link_to 'Test', admin_pages_test_path %></li>
+                                        <li><%= link_to 'Notes', admin_pages_notes_path %></li>
+                                        <li><a href="#">Static3</a></li>
+                                        <li><a href="#">Static4</a></li>
+                                    </ul>
+                                </li>
                                 <% end %>
+
+                                <li><%= link_to 'About', pages_about_path %></li>
                                 <li><a href="contact.html">contact</a></li>
                             </ul>
                         </nav>

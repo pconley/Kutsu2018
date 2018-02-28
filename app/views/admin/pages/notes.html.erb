@@ -1,0 +1,16 @@
+<!-- notes section start -->
+<div class="theme-section theme-section-ex-padding ku-quote-section gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <h2 class="area-title">Release Notes</h2>
+                    <p>Last several releases to production:</p>
+                    <ul>
+			        <% @notes.each do |note| %>
+			        	<li><%= note.released_on %> :: <%= note.summary %> :: <%= note.description %></li>
+			    	<% end %>
+			    	</ul>
+                </div>
+        </div>
+</div>
+<!-- notes section end -->

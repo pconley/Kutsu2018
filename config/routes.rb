@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+  root to: 'pages#home'
+
   devise_for :admins
+
   resources :quotes
   resources :tasks
-  root to: 'pages#home'
 
   get 'pages/home'
   get 'pages/about'
@@ -14,7 +16,10 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/faqs'
 
-  get 'admin/test'
+  get 'admin/pages/home'
+  get 'admin/pages/test'
+  get 'admin/pages/blog'
+  get 'admin/pages/notes'
 
   match "*path", to: "pages#error", via: :all
 

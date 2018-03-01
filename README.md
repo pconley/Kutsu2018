@@ -24,3 +24,7 @@ do not forget to precomile if changing the css; then add; comit; push
 ```
 rake assets:precompile
 ```
+
+## TODO
+* toast for the rails alerts
+* wizard prototype for the request

@@ -7,7 +7,7 @@
                     <div class="header-top-left">
                         <ul class="email-phone">
                             <li><a href="#"><i class="fa fa-envelope"></i> Email: <span class="text-bold">info@yourdomain.com</span></a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+1 703 626 2111</span></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+1 (480) 892-3484</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -72,11 +72,7 @@
                 <div class="col-md-2 hidden-sm hidden-xs">
                     <div class="header-btn">
                         <ul class="header-action">
-                            <% if admin_signed_in? %>
-                                <li><a class="btn btn-default" href="#">log out</a></li>
-                            <% else %>
-                                <li><a class="btn btn-default" href="#">donate now</a></li>
-                            <% end %>
+                            <li><%= link_to 'Donate Now', pages_donate_path, class: "btn btn-default" %></li>
                         </ul>
                     </div>
                 </div>
@@ -119,6 +115,7 @@
                                 <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                     <ul>
                                         <li><%= link_to 'About', pages_about_path %></li>
+                                        <li><%= link_to 'Donate', pages_donate_path %></li>
                                         <li><%= link_to 'Quotes', pages_faqs_path %></li>
                                         <li><a href="contact.html">contact</a></li>
                                         <li><a href="volunteer.html">volunteer</a></li>

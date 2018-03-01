@@ -24,3 +24,7 @@ do not forget to precomile if changing the css; then add; comit; push
 ```
 rake assets:precompile
 ```
+
+## TODO
+* mobile menu has not kept up with changes
+* wicked wizard prototype for requests

@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
 
+  before_action do
+    @name = "<i>National Odd Shoe Exchange</i>".html_safe
+    @bold = "<b>#{@name}</b>".html_safe
+  end
+
   def about
   end
 

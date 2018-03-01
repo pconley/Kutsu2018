@@ -28,3 +28,4 @@ rake assets:precompile
 ## TODO
 * mobile menu has not kept up with changes
 * wicked wizard prototype for requests
+* toast for the rails messages

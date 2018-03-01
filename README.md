@@ -26,5 +26,6 @@ rake assets:precompile
 ```
 
 ## TODO
-* toast for the rails alerts
-* wizard prototype for the request
+* mobile menu has not kept up with changes
+* wicked wizard prototype for requests
+* toast for the rails messages

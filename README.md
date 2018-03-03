@@ -13,6 +13,10 @@ psql                   # to enter interactive mode
 pg_ctl -D pg_data stop
 ```
 
+
+## General Notes
+devise for Agents and Admins
+
 ## Heroku Notes
 
 Normally you push the master to deploy to heroku, but you can used

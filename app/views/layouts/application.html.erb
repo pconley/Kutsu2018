@@ -24,7 +24,16 @@
         <% end %>
         <%= render 'layouts/search' %>
         <%= render 'layouts/slider' if false %>
-        <%= yield %>
+
+
+        <!-- yield section start -->
+        <div class="theme-section theme-section-ex-padding ku-quote-section gray-bg">
+            <div class="container">
+                <%= yield %>
+        </div>
+        <!-- yiel section end -->
+        
+
     </div>
     <!-- Main wrapper end -->
     <% if admin_signed_in? %>

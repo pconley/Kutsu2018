@@ -185,7 +185,11 @@
                 <!-- Mobile menu area end -->
                 <div class="col-md-2">
                     <div class="header-search text-right">
-                        <a class="search-toggle-button" href="#"><i class="fa fa-search"></i></a>
+                        <% if agent_signed_in? %>
+                            <%= link_to('Requestor Logout', destroy_agent_session_path, method: :delete) %>
+                        <% else %>
+                            <%= link_to('Requestor Login', new_agent_session_path) %>
+                        <% end %>
                     </div>
                 </div>
             </div>

@@ -12,6 +12,7 @@ config.action_mailer.default_url_options = { host: 'https://gentle-escarpment-92
 
 
 # Setup the mailer config for SENDGRID on HEROKU
+
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {

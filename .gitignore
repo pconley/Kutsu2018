@@ -8,6 +8,9 @@
 /.bundle
 /.DS_Store
 
+# DO NOT SAVE PASSWORDS in git
+/bin/set_env.sh
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal

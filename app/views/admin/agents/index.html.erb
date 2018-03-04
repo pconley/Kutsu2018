@@ -1,0 +1,30 @@
+<h1>Agents</h1>
+<p>Agent is an artificial term for a person that has registered with the system in order to make a request.  The term "requestor" may have been more intuitive, but that term is likely to collide with built in terms... the terms (http) request is inhereint to a rails app. Likewise "user" is a common term... but that too we are reserving at this point for future use.</p><p>You are logged in as an "admin", therefore you can perform actions on the agents... including creating and deleting of agents... though these may still be under construction.</p>
+<p>Generally agents create themselves via the "sign up" process on the public pages.</p>
+
+<%= link_to 'Create Agent', new_admin_agent_path %>
+<br>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th>Email</th>
+      <th>Confirmed?</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agents.each do |agent| %>
+      <tr>
+        <td><%= agent.email %></td>
+        <td><%= agent.confirmed_at || "No" %></td>
+        <td><%= agent.name || "none" %></td>
+        <td><%= link_to 'Show', admin_agent_path(agent) %></td>
+        <td><%= link_to 'Edit', edit_admin_agent_path(agent) %></td>
+        <td><%= link_to 'Destroy', admin_agent_path(agent), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

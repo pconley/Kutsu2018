@@ -8,6 +8,7 @@ if ENV["RAILS_LOG_TO_STDOUT"].present?
   config.logger = ActiveSupport::TaggedLogging.new(logger)
 end
 
+config.action_mailer.default_url_options = { host: 'https://gentle-escarpment-92216.herokuapp.com/' }
 
 
   # Settings specified here will take precedence over those in config/application.rb.

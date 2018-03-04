@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
+gem 'sendgrid-ruby'
 
 gem 'jquery-rails' # needed for bootstrap
 gem 'bootstrap', '~> 4.0.0.beta2'

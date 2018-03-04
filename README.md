@@ -19,9 +19,10 @@ devise for Agents and Admins
 
 ## Heroku Notes
 
-Normally you push the master to deploy to heroku, but you can used
+Normally you push the master to deploy to heroku, but you can use
+the following to push the "development" branch to heroku
 ```
-git push heroku testbranch:master
+git push heroku development:master
 ```
 
 do not forget to precomile if changing the css; then add; comit; push

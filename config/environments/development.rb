@@ -4,6 +4,19 @@ Rails.application.configure do
   # added for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Setup the mailer config for LOCALHOST
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gentle-escarpment-92216.herokuapp.com',
+    user_name:            ENV["GMAIL_USERNAME"] || 'kutsu',
+    password:             ENV["GMAIL_PASSWORD"] || 'password',
+    authentication:       'plain',
+    enable_starttls_auto: true 
+  }
+
 
   # Settings specified here will take precedence over those in config/application.rb.
 

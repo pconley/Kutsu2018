@@ -16,30 +16,28 @@
 
     <!-- Main wrapper start -->
     <div class="wrapper">
-        <%= render 'layouts/messages' %>
         <% if admin_signed_in? %>
-            <%= render 'layouts/header_private' %>
+            <%= render 'layouts/header_admin' %>
         <% else %>
-            <%= render 'layouts/header' %>
+            <%= render 'layouts/header_public' %>
         <% end %>
+        <%= render 'toastr_rails/flash' %>
         <%= render 'layouts/search' %>
         <%= render 'layouts/slider' if false %>
-
 
         <!-- yield section start -->
         <div class="theme-section theme-section-ex-padding ku-quote-section gray-bg">
             <div class="container">
                 <%= yield %>
         </div>
-        <!-- yiel section end -->
+        <!-- yield section end -->
         
-
     </div>
     <!-- Main wrapper end -->
     <% if admin_signed_in? %>
-        <%= render 'layouts/footer_private' %>
+        <%= render 'layouts/footer_admin' %>
     <% else %>
-        <%= render 'layouts/footer' %>
+        <%= render 'layouts/footer_public' %>
     <% end %>
 
 </body>

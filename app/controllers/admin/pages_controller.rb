@@ -15,6 +15,7 @@ class Admin::PagesController < Admin::AdminController
   def notes
   	puts "*** Admin::PagesController::notes"
   	notes = [
+      Note.new(Date.new(2018,3,4),"agent and email","added devise for agents; sendgrid for email on registration."),
       Note.new(Date.new(2018,3,1),"admin and content","login for admin section and all original content"),
       Note.new(Date.new(2018,2,24),"initial release","merge a design template and rails app"),
   	]

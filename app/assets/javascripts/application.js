@@ -17,4 +17,5 @@
 //= require bootstrap-sprockets
 //= require js/plugins
 //= require js/scripts
+//= require toastr_rails
 

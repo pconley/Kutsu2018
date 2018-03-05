@@ -7,6 +7,7 @@ end
 
 gem 'devise'
 gem 'sendgrid-ruby'
+gem 'toastr_rails' # 3.5.2018
 
 gem 'jquery-rails' # needed for bootstrap
 gem 'bootstrap', '~> 4.0.0.beta2'

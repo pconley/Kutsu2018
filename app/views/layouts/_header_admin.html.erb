@@ -7,7 +7,7 @@
                     <div class="menu-area">
                         <nav class="template-menu">
                             <ul class="main-menu">
-                                <li><%= link_to 'Home', admin_pages_home_path %></li>
+                                <li><%= link_to 'Home', admin_page_path(:home) %></li>
                                 <li><%= link_to 'Agents', admin_agents_path %></li>
                                 <li><%= link_to 'Quotes', quotes_path %></li>
                                 <li><a href="#">blog<i class="fa fa-angle-down"></i></a>
@@ -19,8 +19,8 @@
                                 </li>
                                 <li><a href="#">static pages<i class="fa fa-angle-down"></i></a>
                                     <ul>
-                                        <li><%= link_to 'Test', admin_pages_test_path %></li>
-                                        <li><%= link_to 'Notes', admin_pages_notes_path %></li>
+                                        <li><%= link_to 'Test', admin_page_path(:test) %></li>
+                                        <li><%= link_to 'Notes', admin_page_path(:notes) %></li>
                                         <li><a href="#">Static3</a></li>
                                         <li><a href="#">Static4</a></li>
                                     </ul>

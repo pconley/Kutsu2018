@@ -2,12 +2,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :agents
-
-    get 'pages/home'
-    get 'pages/test'
-    get 'pages/blog'
-    get 'pages/notes'
-
+    get 'pages/:page', to: 'pages#show', as: 'page'
     get 'test/sendex', to: 'admin/test#sendex', as: 'sendex'
   end
 
@@ -36,12 +31,7 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/faqs'
 
-
-
-  # get 'agent/pages#:page'
-
   get '/agent/pages/:page', to: 'agent/pages#show', as: 'agent_page'
-
 
   match "*path", to: "pages#error", via: :all
 

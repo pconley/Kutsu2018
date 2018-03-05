@@ -16,7 +16,7 @@ module Accessible
   def check_user
     if current_admin
       flash.clear
-      redirect_to(admin_pages_home_path) && return
+      redirect_to(admin_page_path(:home)) && return
     elsif current_agent
       flash.clear
       redirect_to(agent_page_path(:home)) && return

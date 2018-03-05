@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   	# puts "*** after sign in. resource=#{resource.inspect}"
     if resource.instance_of? Admin
-      admin_pages_home_path
+      admin_page_path(:home)
     # elsif resource.instance_of? User
     #   pages_home_path
     else

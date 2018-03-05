@@ -1,27 +1,37 @@
 class Admin::PagesController < Admin::AdminController
 
-  def test
-  	puts "*** Admin::PagesController::test"
+  def show
+    puts "*** Admin::PagesController::show page=#{params[:page]}"
+    page_name = params[:page] || 'error'
+    view_file = "#{Rails.root}/app/views/admin/pages/#{page_name}.html.erb"
+    if File.exists?(view_file)
+      @notes = set_notes
+      render page_name
+    else
+      render 'error'
+    end
   end
 
-  def home
-  	puts "*** Admin::PagesController::home"
-  end
 
-  def blog
-  	puts "*** Admin::PagesController::blog"
-  end
+  # def test
+  # 	puts "*** Admin::PagesController::test"
+  # end
 
-  def notes
-  	puts "*** Admin::PagesController::notes"
+  # def home
+  # 	puts "*** Admin::PagesController::home"
+  # end
+
+  # def blog
+  # 	puts "*** Admin::PagesController::blog"
+  # end
+
+  def set_notes
   	notes = [
+      Note.new(Date.new(2018,3,5),"toast and ...","pop up notices."),
       Note.new(Date.new(2018,3,4),"agent and email","added devise for agents; sendgrid for email on registration."),
       Note.new(Date.new(2018,3,1),"admin and content","login for admin section and all original content"),
       Note.new(Date.new(2018,2,24),"initial release","merge a design template and rails app"),
-  	]
-    @notes = notes
-        .sort { |a,b| b.released_on <=> a.released_on }
-        .take(20)
+  	].sort { |a,b| b.released_on <=> a.released_on }.take(20)
   end
 
 end

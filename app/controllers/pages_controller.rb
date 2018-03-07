@@ -5,6 +5,18 @@ class PagesController < ApplicationController
     @bold = "<b>#{@name}</b>".html_safe
   end
 
+  def show
+    puts "*** Public::PagesController::show id=#{params[:id]}"
+    @page = params[:id] || 'error'
+    view_file = "#{Rails.root}/app/views/pages/#{@page}.html.erb"
+    @page = "error" unless File.exists?(view_file)
+
+    @quotes = Quote.all # may be used on any page
+
+    render @page
+  end
+
+
   def about
   end
 

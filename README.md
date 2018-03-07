@@ -34,3 +34,6 @@ rake assets:precompile
 * mobile menu has not kept up with changes
 * wicked wizard prototype for requests
 * toast for the rails messages
+* restructure pubil page routes (DONE)
+* start adding unit test (STARTED)
+* add webtests using shiken

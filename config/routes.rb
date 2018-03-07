@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'pages#show', id: 'home'
+
   namespace :admin do
     resources :agents
     resources :pages, only: [:show]
@@ -8,10 +10,10 @@ Rails.application.routes.draw do
   end
 
   namespace :agent do
-    get 'pages/show'
+    resources :pages, only: [:show]
   end
+  # get '/agent/pages/:page', to: 'agent/pages#show', as: 'agent_page'
 
-  root to: 'pages#home'
 
   devise_for :agents, path: 'agents', controllers: {
     sessions: 'agents/sessions'
@@ -20,20 +22,13 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions'
   }
 
-  resources :tasks
-  resources :quotes
+  resources :tasks # TODO: move to admin
+  resources :quotes # TODO: move to admin
 
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/history'
-  get 'pages/programs'
-  get 'pages/requests'
-  get 'pages/donate'
-  get 'pages/contact'
-  get 'pages/faqs'
+  ### PUBLIC
 
-  get '/agent/pages/:page', to: 'agent/pages#show', as: 'agent_page'
+  resources :pages, only: [:show], as: 'public_page'
 
-  match "*path", to: "pages#error", via: :all
+  match "*path", to: "pages#show", id: 'error', via: :all, as: 'error_page'
 
 end

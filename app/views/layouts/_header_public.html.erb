@@ -72,7 +72,7 @@
                 <div class="col-md-2 hidden-sm hidden-xs">
                     <div class="header-btn">
                         <ul class="header-action">
-                            <li><%= link_to 'Donate Now', pages_donate_path, class: "btn btn-default" %></li>
+                            <li><%= link_to 'Donate Now', public_page_path(:donate), class: "btn btn-default" %></li>
                         </ul>
                     </div>
                 </div>
@@ -114,9 +114,9 @@
                                 </li>
                                 <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                     <ul>
-                                        <li><%= link_to 'About', pages_about_path %></li>
-                                        <li><%= link_to 'Donate', pages_donate_path %></li>
-                                        <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                        <li><%= link_to 'About', public_page_path(:about) %></li>
+                                        <li><%= link_to 'Donate', public_page_path(:donate) %></li>
+                                        <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
                                         <li><a href="contact.html">contact</a></li>
                                         <li><a href="volunteer.html">volunteer</a></li>
                                     </ul>
@@ -133,7 +133,7 @@
                                 </li>
                                 <% end %>
 
-                                <li><%= link_to 'About', pages_about_path %></li>
+                                <li><%= link_to 'About', public_page_path(:about) %></li>
                                 <li><a href="contact.html">contact</a></li>
                             </ul>
                         </nav>
@@ -171,13 +171,13 @@
                             </li>
                             <li><a href="#">pages</a>
                                 <ul>
-                                    <li><%= link_to 'About', pages_about_path %></li>
-                                    <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                    <li><%= link_to 'About', public_page_path(:about) %></li>
+                                    <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
                                     <li><a href="contact.html">contact</a></li>
                                     <li><a href="volunteer.html">volunteer</a></li>
                                 </ul>
                             </li>
-                            <li><%= link_to 'About', pages_about_path %></li>
+                            <li><%= link_to 'About', public_page_path(:about) %></li>
                             <li><a href="contact.html">contact</a></li>
                         </ul>
                     </nav>

@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :agents
-    get 'pages/:page', to: 'pages#show', as: 'page'
+    resources :pages, only: [:show]
+    #get 'pages/:page', to: 'pages#show', as: 'page'
     get 'test/sendex', to: 'admin/test#sendex', as: 'sendex'
   end
 

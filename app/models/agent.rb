@@ -4,4 +4,8 @@ class Agent < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
+
+  def to_s
+  	"<Agent##{id} #{email}>"
+  end
 end

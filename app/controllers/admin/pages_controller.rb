@@ -1,8 +1,11 @@
 class Admin::PagesController < Admin::AdminController
 
+  def index
+  end
+
   def show
-    puts "*** Admin::PagesController::show page=#{params[:page]}"
-    page_name = params[:page] || 'error'
+    puts "*** Admin::PagesController::show id=#{params[:id]}"
+    page_name = params[:id] || 'error'
     view_file = "#{Rails.root}/app/views/admin/pages/#{page_name}.html.erb"
     if File.exists?(view_file)
       @notes = set_notes
@@ -24,6 +27,8 @@ class Admin::PagesController < Admin::AdminController
   # def blog
   # 	puts "*** Admin::PagesController::blog"
   # end
+
+  private
 
   def set_notes
   	notes = [

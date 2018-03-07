@@ -1,4 +1,4 @@
-class Admin::AgentsController < ApplicationController
+class Admin::AgentsController < Admin::AdminController
 
   before_action :set_agent, only: [:show, :edit, :update, :destroy]
 

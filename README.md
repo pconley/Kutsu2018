@@ -19,6 +19,10 @@ devise for Agents and Admins
 
 ## Heroku Notes
 
+```
+heroku apps:info
+```
+
 Normally you push the master to deploy to heroku, but you can use
 the following to push the "development" branch to heroku
 ```
@@ -33,7 +37,7 @@ rake assets:precompile
 ## TODO
 * mobile menu has not kept up with changes
 * wicked wizard prototype for requests
-* toast for the rails messages
+* toast for the rails messages (done)
 * restructure pubil page routes (DONE)
 * start adding unit test (STARTED)
 * add webtests using shiken

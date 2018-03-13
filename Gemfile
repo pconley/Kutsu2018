@@ -53,6 +53,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
+  gem 'colorize'
+  gem 'shiken', '~> 0.0.6'
 end
 
 group :development do

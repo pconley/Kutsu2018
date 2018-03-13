@@ -18,7 +18,7 @@
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                            <li><%= link_to new_admin_session_path do %>
+                            <li><%= link_to new_admin_session_path, id: 'admin_login_link' do %>
                                 <i class="fas fa-podcast"></i>
                             <% end %><li>
                         </ul>
@@ -72,7 +72,7 @@
                 <div class="col-md-2 hidden-sm hidden-xs">
                     <div class="header-btn">
                         <ul class="header-action">
-                            <li><%= link_to 'Donate Now', public_page_path(:donate), class: "btn btn-default" %></li>
+                            <li><%= link_to 'Donate Now', public_page_path(:donate), id: 'donate_now_link', class: "btn btn-default" %></li>
                         </ul>
                     </div>
                 </div>

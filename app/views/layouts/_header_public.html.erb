@@ -188,7 +188,7 @@
                         <% if agent_signed_in? %>
                             <%= link_to('Requestor Logout', destroy_agent_session_path, method: :delete) %>
                         <% else %>
-                            <%= link_to('Requestor Login', new_agent_session_path) %>
+                            <%= link_to('Requestor Login', new_agent_session_path, id: 'requestor_login_link') %>
                         <% end %>
                     </div>
                 </div>

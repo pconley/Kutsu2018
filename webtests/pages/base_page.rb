@@ -1,7 +1,7 @@
 class BasePage < SK::Page
   
   def initialize(page)
-    trace "base page: init host=#{$host}"
+    # trace "base page: init host=#{$host}"
     super($host,page)
   end  
   

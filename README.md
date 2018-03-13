@@ -17,6 +17,19 @@ pg_ctl -D pg_data stop
 ## General Notes
 devise for Agents and Admins
 
+## Testing Notes
+
+```
+rspec spec # for classic unit tests
+```
+
+```
+rspec webtests # for shiken based test
+rspec webtests --format documentation
+HOST=prod rspec webtests # to run against heroku
+TRACE=on rspec webtests  # to get verbose tracing
+```
+
 ## Heroku Notes
 
 ```

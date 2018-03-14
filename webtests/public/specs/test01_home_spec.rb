@@ -1,4 +1,4 @@
-require_relative 'spec_helper.rb'
+require_relative 'public_helper.rb'
 
 RSpec.describe "Home Page" do
 
@@ -11,6 +11,7 @@ RSpec.describe "Home Page" do
   	end
 
   	include_examples "basic page specs", $HomePage
+  	
   	include_examples "public topline specs", $HomePage
   	include_examples "public header specs", $HomePage
   	include_examples "public navbar specs", $HomePage

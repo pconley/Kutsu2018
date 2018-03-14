@@ -28,6 +28,7 @@ rspec webtests # for shiken based test
 rspec webtests --format documentation
 HOST=prod rspec webtests # to run against heroku
 TRACE=on rspec webtests  # to get verbose tracing
+DEPTH=9 rspec webtests   # to get deep testing
 ```
 
 ## Heroku Notes

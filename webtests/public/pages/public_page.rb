@@ -1,3 +1,7 @@
+require "public_topline"
+require "public_header"
+require "public_navbar"
+
 class PublicPage < BasePage
 
   include PublicTopline

@@ -1,4 +1,4 @@
-require_relative 'spec_helper.rb'
+require_relative 'public_helper.rb'
 
 RSpec.describe "Quotes Page" do
 

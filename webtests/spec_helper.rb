@@ -12,7 +12,7 @@ dir = File.dirname(__FILE__)
 $LOAD_PATH.unshift("#{dir}")
 $LOAD_PATH.unshift("#{dir}/public/pages")
 $LOAD_PATH.unshift("#{dir}/public/specs")
-puts "load path = #{$LOAD_PATH[0..3]}"
+# puts "load path = #{$LOAD_PATH[0..3]}"
 
 
 ################ TARGET HOST
@@ -41,7 +41,6 @@ trace "testing to depth =  #{$depth}"
 
 
 require 'base_page.rb'
-require 'basic_page_specs.rb'
 
 $good_user  = "username" # TODO: get from ENV
 $good_pass  = "password" # TODO: get from ENV

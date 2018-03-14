@@ -6,11 +6,8 @@ RSpec.describe "Donate Page" do
 		$DonatePage.goto
 	end
   
-  	include_examples "basic page specs", $DonatePage
-  	include_examples "public topline specs", $HomePage
-  	include_examples "public header specs", $DonatePage
-  	include_examples "public navbar specs", $DonatePage
-      
+  	include_examples "public page specs", $DonatePage
+  	      
 	it "has expected sections" do
 		expect($DonatePage).to have_content("To Contribute")
 		expect($DonatePage).to have_content("Monetary Donation")

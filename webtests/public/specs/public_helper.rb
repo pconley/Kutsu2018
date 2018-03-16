@@ -7,7 +7,7 @@ $LOAD_PATH.unshift("#{dir}/../pages")
 # puts "public load path = #{$LOAD_PATH[0..3]}"
 
 module Public
-	# namespace to contain the public pages
+	# TODO: namespace to contain the public pages
 end
 
 require 'shared_public_specs.rb'

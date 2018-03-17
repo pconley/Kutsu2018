@@ -5,7 +5,11 @@ class Agent < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable
 
+  has_many :orders
+
   def to_s
   	"<Agent##{id} #{email}>"
   end
+  
 end
+

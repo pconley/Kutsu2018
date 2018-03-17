@@ -1,0 +1,37 @@
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>Left size:</strong>
+  <%= @order.left_size %>
+</p>
+
+<p>
+  <strong>Left width:</strong>
+  <%= @order.left_width %>
+</p>
+
+<p>
+  <strong>Right size:</strong>
+  <%= @order.right_size %>
+</p>
+
+<p>
+  <strong>Right width:</strong>
+  <%= @order.right_width %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @order.style %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @order.description %>
+</p>
+
+<%= link_to 'Edit', edit_agent_order_path(@order) %> |
+<%= link_to 'Back', agent_orders_path %>

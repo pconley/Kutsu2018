@@ -1,8 +1,9 @@
 
 FactoryBot.define do
   factory :agent do
-  	r = Random.new(Time.now.to_i).rand(99999)
+  	# r = Random.new(Time.now.to_i).rand(99999)
   	sequence :email do |n|
+  		# puts ">>> n = #{n}"
     	"bot#{1000+n}@factory.com"
   	end
     password  "passwork"

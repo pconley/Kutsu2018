@@ -4,7 +4,7 @@ class Admin::PagesController < Admin::AdminController
   end
 
   def show
-    puts "*** Admin::PagesController::show id=#{params[:id]}"
+    # puts "*** Admin::PagesController::show id=#{params[:id]}"
     page_name = params[:id] || 'error'
     view_file = "#{Rails.root}/app/views/admin/pages/#{page_name}.html.erb"
     if File.exists?(view_file)

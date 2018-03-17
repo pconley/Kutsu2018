@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   namespace :agent do
+    resources :orders
     resources :pages, only: [:show]
   end
   # get '/agent/pages/:page', to: 'agent/pages#show', as: 'agent_page'

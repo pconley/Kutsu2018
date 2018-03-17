@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def show
-    puts "*** Public::PagesController::show id=#{params[:id]}"
+    # puts "*** Public::PagesController::show id=#{params[:id]}"
     @page = params[:id] || 'error'
     view_file = "#{Rails.root}/app/views/pages/#{@page}.html.erb"
     @page = "error" unless File.exists?(view_file)

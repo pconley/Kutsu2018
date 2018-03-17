@@ -6,12 +6,22 @@ module ControllerMacros
     end
   end
 
-  def login_agent
+  def xlogin_agent(agent = FactoryBot.create(:agent))
     before(:each) do
+      puts ">>> login_agent : agent = #{agent}"
+      agent.confirm 
       @request.env["devise.mapping"] = Devise.mappings[:agent]
-      agent = FactoryBot.create(:agent)
-      agent.confirm # or set a confirmed_at inside the factory. Only necessary if you are using the "confirmable" module
       sign_in agent
     end
   end
+
+  def login_agent
+    before(:each) do
+      agent = FactoryBot.create(:agent, email: 'test@test.test')
+      agent.confirm 
+      @request.env["devise.mapping"] = Devise.mappings[:agent]
+      sign_in agent
+    end
+  end
+
 end

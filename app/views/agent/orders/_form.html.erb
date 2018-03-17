@@ -1,0 +1,47 @@
+<%= form_with(model: [:agent, order], local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :left_size %>
+    <%= form.text_field :left_size, id: :order_left_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_width %>
+    <%= form.text_field :left_width, id: :order_left_width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :right_size %>
+    <%= form.text_field :right_size, id: :order_right_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_width %>
+    <%= form.text_field :right_width, id: :order_right_width %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style %>
+    <%= form.text_field :style, id: :order_style %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :order_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

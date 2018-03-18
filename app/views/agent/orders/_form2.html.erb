@@ -1,0 +1,50 @@
+<%= form_with(model: [:agent, order], local: true) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+  <div class="field">
+    <%= form.label :left_size %>
+    <%= collection_select(:order, :left_size, Size.all, :text, :text, {selected: "9"}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_width %>
+    <%= collection_select(:order, :left_width, Wide.all, :text, :text, {selected: "normal"}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :right_size %>
+    <%= collection_select(:order, :right_size, Size.all, :text, :text, {selected: "9"}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :left_width %>
+    <%= collection_select(:order, :right_width, Wide.all, :text, :text, {selected: "normal"}) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style %>
+    <%= form.text_field :style, id: :order_style %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :order_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

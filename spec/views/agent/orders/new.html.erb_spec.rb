@@ -14,12 +14,12 @@ RSpec.describe "agent/orders/new", type: :view do
       # assert_select "input[name=?]", "agent_order[status]"
       # assert_select "input[name=?]", "agent_order[notes]"
 
-      assert_select "input[name=?]", "order[left_size]"
-      assert_select "input[name=?]", "order[left_width]"
-      assert_select "input[name=?]", "order[right_size]"
-      assert_select "input[name=?]", "order[right_width]"
+      assert_select "select[name=?]", "order[left_size]"
+      assert_select "select[name=?]", "order[left_width]"
+      assert_select "select[name=?]", "order[right_size]"
+      assert_select "select[name=?]", "order[right_width]"
       assert_select "input[name=?]", "order[style]"
-      assert_select "input[name=?]", "order[description]"
+      assert_select "textarea[name=?]", "order[description]"
     end
   end
 end

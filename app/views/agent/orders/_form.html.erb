@@ -1,4 +1,5 @@
 <%= form_with(model: [:agent, order], local: true) do |form| %>
+
   <% if order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
@@ -11,37 +12,51 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :left_size %>
-    <%= form.text_field :left_size, id: :order_left_size %>
-  </div>
+<div class="container">
+  <div class="row">
 
-  <div class="field">
-    <%= form.label :left_width %>
-    <%= form.text_field :left_width, id: :order_left_width %>
-  </div>
+    <div class="col-sm">
+        <h3>About your Request</h3>
+	    <div class="field">
+		    <p>Tell us about the <b>style</b> of shoe(s) that you requesting... typical descritopn are casual, business, work boots or that kind of thing.</p>
+		    <%= form.label :style %>:&nbsp;<%= form.text_field :style, id: :order_style %>
+		</div>
 
-  <div class="field">
-    <%= form.label :right_size %>
-    <%= form.text_field :right_size, id: :order_right_size %>
-  </div>
+		<div class="field">
+		  	<br>
+		    <p>Tell us about any special requirements for this request... for example slkdjf sldkjf lskdjf lsdkfj lsdfkj lsdkfj lsdkjf lsdkjf lsdjkf lsdjflskdjf lsdjf lsdjf.</p>
+		    <%= form.text_area :description, id: :order_description, size: "40x5" %>
+		</div>
+    </div>
 
-  <div class="field">
-    <%= form.label :left_width %>
-    <%= form.text_field :right_width, id: :order_right_width %>
-  </div>
+    <div class="col-sm">
+      <h3>Left Shoe</h3>
+      <div class="field">
+    	<%= form.label :size %>
+    	<%= collection_select(:order, :left_size, Size.all, :text, :text) %>
+    	<%= collection_select(:order, :left_width, Wide.all, :text, :text) %>
+  	  </div>
+  	  <%= image_tag("img/left-shoe-footprint-xxl.png") %>
+    </div>
 
-  <div class="field">
-    <%= form.label :style %>
-    <%= form.text_field :style, id: :order_style %>
-  </div>
+    <div class="col-sm">
+    	<h3>Right Shoe</h3>
+        <div class="field">
+		    <%= form.label :size %>
+		    <%= collection_select(:order, :right_size, Size.all, :text, :text) %>
+		    <%= collection_select(:order, :right_width, Wide.all, :text, :text) %>
+		</div>
+		<%= image_tag("img/right-shoe-footprint-xxl.png") %>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description, id: :order_description %>
   </div>
+</div>
+
+
+
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

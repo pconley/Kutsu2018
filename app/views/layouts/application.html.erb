@@ -18,6 +18,8 @@
     <div class="wrapper">
         <% if admin_signed_in? %>
             <%= render 'layouts/header_admin' %>
+        <% elsif agent_signed_in? %>
+            <%= render 'layouts/header_agent' %>
         <% else %>
             <%= render 'layouts/header_public' %>
         <% end %>

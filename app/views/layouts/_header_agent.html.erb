@@ -1,0 +1,158 @@
+<!-- Header area start -->
+<header class="header-area header-with-countdown header-bottom-bg">
+    <div class="header-top-area red-header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-8">
+                    <div class="header-top-left">
+                        <ul class="email-phone">
+                            <li><a href="#"><i class="fa fa-envelope"></i> Email: <span class="text-bold">info@yourdomain.com</span></a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> Call us: <span class="text-bold">+1 (480) 892-3484</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-4">
+                    <div class="header-top-right">
+                        <ul class="header-social-menu">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                            <li><%= link_to new_admin_session_path, id: 'admin_login_link' do %>
+                                <i class="fas fa-podcast"></i>
+                            <% end %><li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-header-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-12">
+                    <div class="logo-wrapper">
+                        <a class="logo" href="home.html">N.O.S.E</a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-9 col-xs-12">
+                    <div class="countdown-area">
+                        <div class="countdown-message">
+                            <h2>Our next event</h2>
+                            <p>Make your donation now</p>
+                        </div>
+                        <div class="countdown">
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="days">0</h4>
+                                    <span>days</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="hours">0</h4>
+                                    <span>hours</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="minutes">0</h4>
+                                    <span>minutes</span>
+                                </div>
+                            </div>
+                            <div class="timer">
+                                <div class="time-wrapper">
+                                    <h4 class="seconds">0</h4>
+                                    <span>seconds</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 hidden-sm hidden-xs">
+                    <div class="header-btn">
+                        <ul class="header-action">
+                            <li><%= link_to 'Donate Now', public_page_path(:donate), id: 'donate_now_link', class: "btn btn-default" %></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sticky-header" class="menu-full-width color">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 hidden-xs hidden-sm">
+                    <div class="menu-area">
+                        <nav class="template-menu">
+                            <ul class="main-menu">
+                                <li><%= link_to 'Home', agent_page_path(:home) %></li>
+                                <li><%= link_to 'Blog', public_page_path(:blog) %></li>
+                                <% if @orders && @orders.length > 1 %>
+                                    <li><%= link_to "#{@orders.length} Orders", agent_orders_path %></li>
+                                <% elsif @orders && @orders.length == 1 %>
+                                    <li><%= link_to "My Order", agent_order_path(@orders[0]) %></li>
+                                <% else # there is no order yet %>
+                                    <li><%= link_to "Make Order", new_agent_order_path %></li>
+                                <% end %>
+                                <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
+                                <li><%= link_to 'About', public_page_path(:about) %></li>
+                                <li><a href="contact.html">contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Mobile menu area start -->
+                <div class="mobile-menu-area clearfix hidden-md">
+                    <nav class="mobile-menu">
+                        <ul class="mobile-menu-nav">
+                            <li><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="index.html">humanity - home 1</a></li>
+                                    <li><a href="index-2.html">humanity - home 2</a></li>
+                                    <li><a href="index-3.html">humanity - home 3</a></li>
+                                    <li><a href="index-4.html">humanity - home 4</a></li>
+                                    <li><a href="index-5.html">humanity - home 5</a></li>
+                                    <li><a href="index-6.html">humanity - home 6</a></li>
+                                    <li><a href="index-7.html">humanity - home 7</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">event</a>
+                                <ul>
+                                    <li><a href="event-grid-view.html">event grid</a></li>
+                                    <li><a href="event-left-sidebar.html">event left sidebar</a></li>
+                                    <li><a href="event-right-sidebar.html">event right sidebar</a></li>
+                                    <li><a href="single-event.html">single event</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">blog</a>
+                                <ul>
+                                    <li><a href="blog-left-sidebar.html">blog left sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">blog right sidebar</a></li>
+                                    <li><a href="single-blog-post.html">single blog post</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">pages</a>
+                                <ul>
+                                    <li><%= link_to 'About', public_page_path(:about) %></li>
+                                    <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
+                                    <li><a href="contact.html">contact</a></li>
+                                    <li><a href="volunteer.html">volunteer</a></li>
+                                </ul>
+                            </li>
+                            <li><%= link_to 'About', public_page_path(:about) %></li>
+                            <li><a href="contact.html">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile menu area end -->
+                <div class="col-md-2">
+                    <div class="header-search text-right">
+                        <%= link_to("#{current_agent.id} Logout", destroy_agent_session_path, method: :delete) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header area end -->

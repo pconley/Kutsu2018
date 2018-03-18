@@ -2,11 +2,13 @@ class Agent::OrdersController < Agent::AgentController
 
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  before_action :set_orders # , only: [:show, :edit, :update, :destroy, :index]
+
   # GET /agent/orders
   # GET /agent/orders.json
   def index
     # puts "*** Agent::OrdersController#index current_agent = #{current_agent}"
-    @orders = Order.where(agent: current_agent)
+    # @orders = Order.where(agent: current_agent)
   end
 
   # GET /agent/orders/1
@@ -71,9 +73,14 @@ class Agent::OrdersController < Agent::AgentController
       @order = Order.find(params[:id])
     end
 
+    def set_orders
+      @orders = Order.where(agent: current_agent)
+      puts "*** Agent::OrdersController##{action_name} found #{@orders.length} orders"
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
       # removed agent_id, status and notes as they are to be used by the admins
-      params.require(:order).permit(:left_size, :left_width, :right_size, :left_width, :style, :description)
+      params.require(:order).permit(:left_size, :left_width, :right_size, :right_width, :style, :description)
     end
 end

@@ -1,3 +1,11 @@
+Size.delete_all
+sizes = ['7','7 1/2','8','8 1/2','9','9 1/2','10','10 1/2','11','11 1/2','12','12 1/2']
+sizes.each { |text| Size.create( text: text ) }
+
+Wide.delete_all
+wides = ['normal','narrow','wide (d)','extra wide']
+wides.each { |text| Wide.create( text: text ) }
+
 quotes = [
 ["...Thank you, thank you, thank you! Ya'll will never know how much these shoes meant....  When we opened the box she started crying and asking if they were for her. For a child who never owned more than 1 pair of shoes in her life, it was like Christmas.... Once again I want to say thanks, you made my child's whole year...", "BA, Daughter Age 5, Louisiana"], 
 ["...I would like to applaud you for the service you offer. It is indeed a nice feeling to know that I have at last found (an organization) that caters to my needs! ... Everything was perfect ... I would like you to know how much easier you make (getting) shoes for an amputee...", "JS, Age 39, Florida"], 

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :order do
     agent 
-    status "Status"
+    # status "Status"  # default is set by the model
     notes "Notes"
     left_size "Left Size"
     left_width "Left Width"

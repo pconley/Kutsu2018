@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#show', id: 'home'
+  root to: 'public/pages#show', id: 'home'
 
   namespace :admin do
     resources :agents
@@ -26,10 +26,10 @@ Rails.application.routes.draw do
   resources :tasks # TODO: move to admin
   resources :quotes # TODO: move to admin
 
-  ### PUBLIC
+  namespace :public do
+    resources :pages, only: [:show]
+  end
 
-  resources :pages, only: [:show], as: 'public_page'
-
-  match "*path", to: "pages#show", id: 'error', via: :all, as: 'error_page'
+  match "*path", to: "public/pages#show", id: 'error', via: :all, as: 'error_page'
 
 end

@@ -10,6 +10,11 @@ class Agent < ApplicationRecord
   def to_s
   	"<Agent##{id} #{email}>"
   end
+
+  def name
+  	name, domain = email.split("@")
+  	return name
+  end
   
 end
 

@@ -148,7 +148,8 @@
                 <!-- Mobile menu area end -->
                 <div class="col-md-2">
                     <div class="header-search text-right">
-                        <%= link_to("#{current_agent.id} Logout", destroy_agent_session_path, method: :delete) %>
+                        <%= link_to(current_agent.name, agent_page_path(:home)) %> &nbsp;
+                        <%= link_to("Logout", destroy_agent_session_path, method: :delete) %>
                     </div>
                 </div>
             </div>

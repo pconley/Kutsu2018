@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class Public::PagesController < Public::PublicController
 
   before_action do
     @name = "<i>National Odd Shoe Exchange</i>".html_safe
@@ -8,7 +8,7 @@ class PagesController < ApplicationController
   def show
     # puts "*** Public::PagesController::show id=#{params[:id]}"
     @page = params[:id] || 'error'
-    view_file = "#{Rails.root}/app/views/pages/#{@page}.html.erb"
+    view_file = "#{Rails.root}/app/views/public/pages/#{@page}.html.erb"
     @page = "error" unless File.exists?(view_file)
 
     @quotes = Quote.all # may be used on any page

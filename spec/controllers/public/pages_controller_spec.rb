@@ -6,7 +6,7 @@ pages = %w(home about history programs requests donate contact faqs)
 
 errors = %w(other xxx zzz)
 
-RSpec.describe PagesController, type: :controller do
+RSpec.describe Public::PagesController, type: :controller do
 
 	describe "GET" do
 		pages.each do |page|
@@ -30,7 +30,8 @@ RSpec.describe PagesController, type: :controller do
 		pages.each do |page|
 			it "with id #{page} renders page" do
 		      get :show, params: { id: page }
-		      expect(response).to render_template(page)
+		      expected_template = ["public/pages/#{page}", "layouts/application"]
+		      expect(response).to render_template("public/pages/#{page}")
 			end
 		end
 	end

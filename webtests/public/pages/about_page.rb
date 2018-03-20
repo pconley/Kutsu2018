@@ -1,7 +1,7 @@
 class AboutPage < PublicPage
     
   def initialize()
-    super('pages/about') 
+    super('public/pages/about') 
   end
   
 end

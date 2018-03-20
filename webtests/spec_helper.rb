@@ -1,7 +1,7 @@
 require 'shiken'
 
 def trace(s)
-  puts ">>> #{s}" if $trace
+  puts ">> #{s}" if $trace
 end
 
 def warn(s)

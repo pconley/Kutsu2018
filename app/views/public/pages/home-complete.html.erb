@@ -122,13 +122,13 @@
                                         </li>
                                         <li><a href="#">pages<i class="fa fa-angle-down"></i></a>
                                             <ul>
-                                                <li><%= link_to 'About', pages_about_path %></li>
-                                                <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                                <li><%= link_to 'About', public_page_path(:about) %></li>
+                                                <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
                                                 <li><a href="contact.html">contact</a></li>
                                                 <li><a href="volunteer.html">volunteer</a></li>
                                             </ul>
                                         </li>
-                                        <li><%= link_to 'About', pages_about_path %></li>
+                                        <li><%= link_to 'About', public_page_path(:about) %></li>
                                         <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </nav>
@@ -167,13 +167,13 @@
                                     </li>
                                     <li><a href="#">pages</a>
                                         <ul>
-                                            <li><%= link_to 'About', pages_about_path %></li>
-                                            <li><%= link_to 'Quotes', pages_faqs_path %></li>
+                                            <li><%= link_to 'About', public_page_path(:about) %></li>
+                                            <li><%= link_to 'Quotes', public_page_path(:faqs) %></li>
                                             <li><a href="contact.html">contact</a></li>
                                             <li><a href="volunteer.html">volunteer</a></li>
                                         </ul>
                                     </li>
-                                    <li><%= link_to 'About', pages_about_path %></li>
+                                    <li><%= link_to 'About', public_page_path(:about) %></li>
                                     <li><a href="contact.html">contact</a></li>
                                 </ul>
                             </nav>

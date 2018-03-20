@@ -14,9 +14,9 @@
   <tbody>
     <% @quotes.each do |quote| %>
       <tr>
-        <td><%= link_to 'Show', quote %></td>
-        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
-        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_quote_path(quote) %></td>
+        <td><%= link_to 'Edit', edit_admin_quote_path(quote) %></td>
+        <td><%= link_to 'Destroy', admin_quote_path(quote), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= quote.signature %></td>
         <td><%= quote.text %></td>
       </tr>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Quote', new_quote_path %>
+<%= link_to 'New Quote', new_admin_quote_path %>

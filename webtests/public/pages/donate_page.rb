@@ -1,7 +1,7 @@
 class DonatePage < PublicPage
     
   def initialize()
-    super('pages/donate') 
+    super('public/pages/donate') 
   end
   
 end

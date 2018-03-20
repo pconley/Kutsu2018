@@ -1,7 +1,7 @@
 class QuotesPage < PublicPage
     
   def initialize()
-    super('pages/faqs') 
+    super('public/pages/faqs') 
   end
 
   def quotes
